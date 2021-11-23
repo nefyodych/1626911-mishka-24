@@ -1,7 +1,7 @@
-# Личный проект «Мишка» 
+# Личный проект «Мишка»
 
-* Студент: [Кирилл Нефедов](https://up.htmlacademy.ru/adaptive/24/user/1626911).
-* Наставник: `Неизвестно`.
+- Студент: [Кирилл Нефедов](https://up.htmlacademy.ru/adaptive/24/user/1626911).
+- Наставник: [Алексей Елькин](https://htmlacademy.ru/profile/alex_elkin).
 
 ---
 

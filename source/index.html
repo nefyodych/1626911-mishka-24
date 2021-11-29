@@ -13,28 +13,29 @@
       <svg width="86" height="35">
         <use xlink:href="#"></use>
       </svg>
+      <span class="visually-hidden">Главная страница</span>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="#">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Вязание на заказ</a>
+            <a class="site-list__link" href="order.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a href="#">
-              <svg class="user-list__search-icon" width="18" height="18">
+            <a class="site-list__link" href="#">
+              <svg class="site-list__search-icon" width="18" height="18">
                 <use xlink:href="#"></use>
               </svg>
               Поиск по сайту
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
-              <svg class="user-list__buy-icon" width="21" height="18">
+            <a class="site-list__link" href="#">
+              <svg class="site-list__buy-icon" width="21" height="18">
                 <use xlink:href="#"></use>
               </svg>
               Корзина: пока пуста
@@ -88,7 +89,8 @@
           </li>
         </ul>
       </div>
-      <img class="promo__images" src="http://placekitten.com/g/260/315" alt="Изображение пряжи">
+      <img class="promo__images" src="http://placekitten.com/g/260/315" alt="Изображение пряжи" width="260"
+        height="315">
       <div class="promo__buy">
         <p class="promo__buy-price">Цена: 990 руб.</p>
         <a class="button promo__buy-button" href="#">Заказать</a>
@@ -100,39 +102,21 @@
       <h2 class="title-common about__title">Коротко о нас</h2>
       <ul class="about__list">
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Экологически чистые материалы</p>
         </li>
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Скандинавский стиль по российской цене</p>
         </li>
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Увеличивает лайки на фотографиях</p>
         </li>
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Связано вручную с любовью и умилением</p>
         </li>
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Поддержка отечественного производителя</p>
         </li>
         <li class="about__item">
-          <svg class="about__list-icon" width="55" height="40">
-            <use xlink:href="#"></use>
-          </svg>
           <p class="about__list-text">Поставляется в подарочной упаковке</p>
         </li>
       </ul>
@@ -187,45 +171,47 @@
       </div>
       <button class="button contacts__button" type="button">Напишите нам</button>
     </section>
+  </main>
 
-    <!-- Футер -->
-    <footer class="page-footer">
-      <div class="footer__social">
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a target="_blank" href="#">
-              <svg class="about__list-icon" width="30" height="30">
-                <use xlink:href="#"></use>
-              </svg>
-              <span class="visually-hidden">Instagram</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a target="_blank" href="#">
-              <svg class="about__list-icon" width="30" height="30">
-                <use xlink:href="#"></use>
-              </svg>
-              <span class="visually-hidden">Facebook</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a target="_blank" href="#">
-              <svg class="about__list-icon" width="30" height="30">
-                <use xlink:href="#"></use>
-              </svg>
-              <span class="visually-hidden">Twitter</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+  <!-- Футер -->
+  <footer class="page-footer">
+    <div class="page-footer__social">
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a target="_blank" href="#">
+            <svg class="social-list__icon" width="30" height="30">
+              <use xlink:href="#"></use>
+            </svg>
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a target="_blank" href="#">
+            <svg class="social-list__icon" width="30" height="30">
+              <use xlink:href="#"></use>
+            </svg>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a target="_blank" href="#">
+            <svg class="social-list__icon" width="30" height="30">
+              <use xlink:href="#"></use>
+            </svg>
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright">
       <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/">
         <span class="copyright__text">Разработано</span>
         <svg class="copyright__icon" width="27" height="35">
           <use xlink:href="#"></use>
         </svg>
       </a>
-    </footer>
-  </main>
+    </div>
+  </footer>
 </body>
 
 </html>

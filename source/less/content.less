@@ -1,0 +1,68 @@
+/* Подключенные шрифты */
+/* ---------------------------------------- */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
+}
+
+// Основной цвет
+@skyblue: #63d1bb;
+// Цвет бордера
+@border: #ececec;
+// Бледный черный цвет для альтернативного текста и бордера кнопок
+@darklight: #444444;
+
+html {
+  margin: 0 auto;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title-common {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}

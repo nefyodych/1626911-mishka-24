@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка: главная страница</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,8 +18,10 @@
       <span class="visually-hidden">Главная страница</span>
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть/Закрыть меню</span>
+      </button>
+      <div class="main-nav__wrapper main-nav__wrapper--hidden">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -26,20 +30,10 @@
             <a class="site-list__link" href="order.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">
-              <svg class="site-list__search-icon" width="18" height="18">
-                <use xlink:href="#"></use>
-              </svg>
-              Поиск по сайту
-            </a>
+            <a class="site-list__link site-list__icon site-list__icon--search" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">
-              <svg class="site-list__buy-icon" width="21" height="18">
-                <use xlink:href="#"></use>
-              </svg>
-              Корзина: пока пуста
-            </a>
+            <a class="site-list__link site-list__icon site-list__icon--buy" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
@@ -49,24 +43,24 @@
   <!-- Блок основного контента -->
   <main class="page-main">
     <!-- Секция заголовка страницы -->
-    <div class="intro">
-      <h1 class="title-common intro__title">Милые штуки ручной работы для дома</h1>
+    <div class="intro intro-main">
+      <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
     </div>
     <!-- Секция категорий товаров -->
     <section class="category">
       <h2 class="visually-hidden">Выбор категории товаров</h2>
       <ul class="category__list">
         <li class="category__item category__item--interior">
-          <a href="#" class="category__item-title">Предметы интерьера</a>
+          <a href="#" class="category__item-title">Предметы<br> интерьера</a>
         </li>
         <li class="category__item category__item--toys">
-          <a href="#" class="category__item-title">Детские игрушки</a>
+          <a href="#" class="category__item-title">Детские<br> игрушки</a>
         </li>
       </ul>
     </section>
 
     <!-- Товар недели -->
-    <section class="promo">
+    <section class="promo container">
       <div class="promo__heading">
         <h2 class="title-common promo__title">Вязаные корзинки</h2>
         <p class="promo__subtitle">Товар недели</p>
@@ -80,7 +74,7 @@
             <span>«Тиффани»/серый</span>
           </li>
           <li class="promo__item">
-            <span>Диаметры:</span>
+            <span>Диаметр:</span>
             <span>25 см</span>
           </li>
           <li class="promo__item">
@@ -89,41 +83,42 @@
           </li>
         </ul>
       </div>
-      <img class="promo__images" src="http://placekitten.com/g/260/315" alt="Изображение пряжи" width="260"
-        height="315">
+      <div class="promo__ware">
+        <img class="promo__images" src="../img/main/yarn-common.jpg" alt="Изображение пряжи" width="260" height="315">
+      </div>
       <div class="promo__buy">
         <p class="promo__buy-price">Цена: 990 руб.</p>
-        <a class="button promo__buy-button" href="#">Заказать</a>
+        <a class="button button--promo" href="#">Заказать</a>
       </div>
     </section>
 
     <!-- О нас -->
-    <aside class="about">
+    <aside class="about container">
       <h2 class="title-common about__title">Коротко о нас</h2>
       <ul class="about__list">
-        <li class="about__item">
-          <p class="about__list-text">Экологически чистые материалы</p>
+        <li class="about__item about__item--flower">
+          <p class="about__list-text">Экологически<br> чистые материалы</p>
         </li>
-        <li class="about__item">
-          <p class="about__list-text">Скандинавский стиль по российской цене</p>
+        <li class="about__item about__item--money">
+          <p class="about__list-text">Скандинавский стиль<br> по российской цене</p>
         </li>
-        <li class="about__item">
-          <p class="about__list-text">Увеличивает лайки на фотографиях</p>
+        <li class="about__item about__item--flower">
+          <p class="about__list-text">Увеличивает лайки<br> на фотографиях</p>
         </li>
-        <li class="about__item">
-          <p class="about__list-text">Связано вручную с любовью и умилением</p>
+        <li class="about__item about__item--tangle">
+          <p class="about__list-text">Связано вручную<br> с любовью и умилением</p>
         </li>
-        <li class="about__item">
-          <p class="about__list-text">Поддержка отечественного производителя</p>
+        <li class="about__item about__item--rocket">
+          <p class="about__list-text">Поддержка отечественного<br> производителя</p>
         </li>
-        <li class="about__item">
-          <p class="about__list-text">Поставляется в подарочной упаковке</p>
+        <li class="about__item about__item--gift">
+          <p class="about__list-text">Поставляется<br> в подарочной упаковке</p>
         </li>
       </ul>
     </aside>
 
     <!-- Отзывы -->
-    <section class="review">
+    <section class="review container">
       <h2 class="title-common review__title">Отзывы</h2>
       <p class="review__text">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
@@ -135,67 +130,71 @@
         <p class="review__social">@misssssiskras</p>
       </div>
       <div class="review__buttons-arrow">
-        <button class="button review__button-arrow" type="button">
+        <button class="button button--review-arrow" type="button">
           <span class="visually-hidden">Предыдущий отзыв</span>
           <svg class="review__button-arrow-icon" width="50" height="26">
             <use xlink:href="#"></use>
           </svg>
         </button>
-        <button class="button review__button-arrow" type="button">
+        <button class="button button--review-arrow" type="button">
           <span class="visually-hidden">Следующий отзыв</span>
           <svg class="review__button-arrow-icon review__button-arrow-icon--turn" width="50" height="26">
             <use xlink:href="#"></use>
           </svg>
         </button>
       </div>
-      <button class="button review__button" type="button">Написать</button>
+      <button class="button button--review" type="button">Написать</button>
     </section>
 
     <!-- Контакты -->
     <section class="contacts">
-      <h2 class="title-common contacts__title">Контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <span>e-mail:</span>
-          <span>info@mimimishkashop.ru</span>
-        </li>
-        <li class="contacts__item">
-          <span>адрес:</span>
-          <span>Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</span>
-        </li>
-      </ul>
-      <div class="contacts__maps">
-        <iframe class="contacts__maps-yandex"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac7b0c2b982aea6c1c89629feddd8c9824dd2a46e309f96ceae2be594d1c74774&amp;source=constructor"
-          width="320" height="454"></iframe>
+      <div class="container">
+        <h2 class="title-common contacts__title">Контакты</h2>
+        <div class="contacts__desc">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span>e-mail:</span>
+              <span>info@mimimishkashop.ru</span>
+            </li>
+            <li class="contacts__item">
+              <span>адрес:</span>
+              <span>Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <button class="button contacts__button" type="button">Напишите нам</button>
+      <div class="contacts__maps">
+        <a class="contacts__maps-link" href="https://yandex.ru/maps/-/CCUujFWPgB" target="_blank">
+          <img class="contacts__maps-img" src="../img/main/map-mobile.jpg" alt="Карта проезда" width="320" height="454">
+        </a>
+      </div>
+      <button class="button button-contacts" type="button">Напишите нам</button>
     </section>
   </main>
 
   <!-- Футер -->
   <footer class="page-footer">
     <div class="page-footer__social">
-      <ul class="social-list">
-        <li class="social-list__item">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
           <a target="_blank" href="#">
-            <svg class="social-list__icon" width="30" height="30">
+            <svg class="page-footer__social-icon" width="30" height="30">
               <use xlink:href="#"></use>
             </svg>
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
-        <li class="social-list__item">
+        <li class="page-footer__social-item">
           <a target="_blank" href="#">
-            <svg class="social-list__icon" width="30" height="30">
+            <svg class="page-footer__social-icon" width="30" height="30">
               <use xlink:href="#"></use>
             </svg>
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li class="social-list__item">
+        <li class="page-footer__social-item">
           <a target="_blank" href="#">
-            <svg class="social-list__icon" width="30" height="30">
+            <svg class="page-footer__social-icon" width="30" height="30">
               <use xlink:href="#"></use>
             </svg>
             <span class="visually-hidden">Twitter</span>
@@ -204,9 +203,9 @@
       </ul>
     </div>
     <div class="page-footer__copyright">
-      <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/">
-        <span class="copyright__text">Разработано</span>
-        <svg class="copyright__icon" width="27" height="35">
+      <a class="page-footer__copyright-link" target="_blank" href="https://htmlacademy.ru/">
+        <span class="page-footer__copyright-text">Разработано</span>
+        <svg class="page-footer__copyright-icon" width="27" height="35">
           <use xlink:href="#"></use>
         </svg>
       </a>

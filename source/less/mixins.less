@@ -1,17 +1,31 @@
+// Основной цвет
+@skyblue: #63d1bb;
+// Альтернативный цвет
+@skyblue-d: #56c3b2;
+// Цвет бордера
+@border: #ececec;
+// Бледный черный цвет для альтернативного текста и бордера кнопок
+@darklight: #444444;
+
 .style-common() {
   margin: 0;
   padding: 0;
 }
 
-input {
-  .style-common();
+.hidden() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-ul {
-  .style-common();
-  list-style-type: none;
-}
-
-p {
-  .style-common();
-}
+// Размеры устройств
+@tablet-width: 768px;
+@desktop-width: 1150px;
+@mobile-width-only: 767px;

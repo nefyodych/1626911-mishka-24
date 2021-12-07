@@ -9,16 +9,22 @@
 }
 
 .intro-main {
-  padding: 73px 30px 120px;
+  display: block;
+  padding: 73px 30px 30px;
   box-sizing: border-box;
-  margin-bottom: -68px;
-  min-height: 356px;
+  min-height: 300px;
 
   background-color: #f8f8f8;
   background-image: url("../img/intro/intro-mobile.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center top -16px;
+
+  @media (min-width: @tablet-width) {
+    padding: 155px 50px 50px;
+
+    min-height: 626px;
+
+    background-image: url("../img/intro/intro-tablet.jpg");
+  }
 }
 
 .intro__title {
@@ -29,6 +35,13 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 668px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .intro-catalog {

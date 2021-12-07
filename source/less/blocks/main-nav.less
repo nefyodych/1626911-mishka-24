@@ -1,0 +1,28 @@
+.main-nav {
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0;
+  z-index: 1;
+
+  width: 100%;
+
+  background-color: #ffffff;
+  outline: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    outline: none;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main-nav__wrapper {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 0 50px;
+  }
+}

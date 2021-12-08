@@ -1,28 +1,70 @@
 .main-nav {
-  position: absolute;
-  top: calc(100% + 1px);
-  right: 0;
-  z-index: 1;
-
-  width: 100%;
-
-  background-color: #ffffff;
-  outline: 1px solid @border;
+  position: relative;
+  min-height: 78px;
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
     outline: none;
-    top: 0;
-    left: 0;
   }
 }
 
-.main-nav__wrapper {
-  width: 100%;
-  margin: 0 auto;
+.main-nav__link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  outline: 1px solid @skyblue;
 
   @media (min-width: @tablet-width) {
-    box-sizing: border-box;
-    padding: 0 50px;
+    left: 0;
+    top: calc(88px / 2);
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50%;
+    top: calc(88px / 2);
+  }
+}
+
+.main-nav__button-nav {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+  outline: 1px solid @skyblue;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__logo {
+  display: block;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+
+  min-width: 320px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  border: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    background-color: transparent;
+    border: none;
   }
 }

@@ -30,8 +30,10 @@
 }
 
 .button--review {
-  position: absolute;
-  width: 175px;
-  top: 83px;
-  right: 50px;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 175px;
+    top: 83px;
+    right: 50px;
+  }
 }

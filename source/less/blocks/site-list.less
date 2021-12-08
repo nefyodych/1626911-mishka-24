@@ -80,20 +80,6 @@
   grid-area: post;
 }
 
-.site-list__item--logo {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: contents;
-    grid-area: logo;
-  }
-}
-
-.site-list__logo {
-  display: block;
-  outline: 1px solid @skyblue;
-}
-
 .site-list__item--new,
 .site-list__item--sale,
 .site-list__item--post {
@@ -103,7 +89,7 @@
 }
 
 .site-list__item:last-child {
-  border: none;
+  border-bottom: none;
 }
 
 .site-list__link {

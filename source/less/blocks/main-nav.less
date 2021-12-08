@@ -50,6 +50,7 @@
   display: block;
 }
 
+// Сама навигация
 .main-nav__wrapper {
   position: absolute;
   top: 100%;
@@ -66,5 +67,126 @@
     position: static;
     background-color: transparent;
     border: none;
+  }
+}
+
+.main-nav__list {
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 167px 155px auto 83px 265px;
+    grid-template-rows: 88px 68px;
+    align-items: center;
+    grid-template-areas:
+      "logo . . search  buy"
+      "catalog order . . post ";
+  }
+}
+
+.main-nav__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  min-height: 80px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: auto;
+    min-height: 100%;
+
+    border: none;
+  }
+}
+
+.main-nav__list-item:last-child {
+  border-bottom: none;
+}
+
+.main-nav__list-link {
+  padding: 20px 20px 20px 76px;
+  width: 100%;
+
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 0;
+  }
+}
+
+.main-nav__list-item--catalog {
+  grid-area: catalog;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__list-item--order {
+  grid-area: order;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__list-item--search {
+  grid-area: search;
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @border;
+  }
+}
+
+.main-nav__list-item--buy {
+  grid-area: buy;
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @border;
+  }
+}
+
+.main-nav__list-item--post {
+  grid-area: post;
+}
+
+.main-nav__list-item--new,
+.main-nav__list-item--sale,
+.main-nav__list-item--post {
+  @media (max-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__list-icon::before {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid @skyblue;
+  content: "";
+}
+
+.main-nav__text-search {
+  @media (min-width: @tablet-width) {
+    .hidden();
+  }
+}
+
+.main-nav__text-buy {
+  @media (min-width: @tablet-width) {
+    padding-left: 80px;
   }
 }

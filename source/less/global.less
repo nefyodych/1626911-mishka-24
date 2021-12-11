@@ -35,19 +35,29 @@ h2 {
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .container {
-  padding-left: 30px;
-  padding-right: 30px;
+  .padding();
 
   @media (min-width: @tablet-width) {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1250px;
+  }
+}
+
+.container--l-mod {
+  .padding--l-mod();
 }
 
 input,

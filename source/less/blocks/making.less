@@ -1,16 +1,65 @@
-.making {
-  margin-bottom: 58px;
-}
-
 .making__content {
+  display: flex;
+  flex-direction: column;
   width: 260px;
   margin: 0 auto;
   padding-bottom: 35px;
 
   outline: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1050px;
+    width: 100%;
+    min-height: 454px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-areas:
+      "video title"
+      "video info"
+      "video button";
+    padding-bottom: 0;
+  }
 }
 
-.making__title {
+.making__item-video {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: video;
+  }
+}
+
+.making__item-button {
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+    .making-box-padding();
+  }
+}
+
+.making__item-info {
+  margin-bottom: 40px;
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: info;
+    .making-box-padding();
+  }
+}
+
+.making__item-title {
   position: relative;
 
   display: flex;
@@ -18,9 +67,16 @@
   padding: 21px 13px 26px 91px;
   box-sizing: border-box;
   min-height: 96px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: title;
+    .making-box-padding();
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
 }
 
-.making__title::before {
+.making__item-title::before {
   position: absolute;
   left: 34px;
 
@@ -29,29 +85,50 @@
 
   content: "";
   outline: 1px solid @skyblue;
+
+  @media (min-width: @desktop-width) {
+    left: 80px;
+    top: 47px;
+  }
 }
 
 .making__preview {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 454px;
+  }
 }
 
 .making__title-text {
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .making__subtitle {
-  padding: 0 30px;
-
   font-size: 13px;
   line-height: 24px;
   color: @darklight;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
-.making__video {
-  margin-bottom: 35px;
-}
+.making__title-text br {
+  display: none;
 
-.making__info {
-  margin-bottom: 40px;
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

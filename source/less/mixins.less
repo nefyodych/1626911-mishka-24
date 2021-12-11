@@ -7,6 +7,11 @@
 // Бледный черный цвет для альтернативного текста и бордера кнопок
 @darklight: #444444;
 
+// Размеры устройств
+@tablet-width: 768px;
+@desktop-width: 1150px;
+@mobile-width-only: 767px;
+
 .style-common() {
   margin: 0;
   padding: 0;
@@ -25,7 +30,29 @@
   overflow: hidden;
 }
 
-// Размеры устройств
-@tablet-width: 768px;
-@desktop-width: 1150px;
-@mobile-width-only: 767px;
+.padding() {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.padding--l-mod() {
+  @media (min-width: @desktop-width) {
+    padding-left: 225px;
+  }
+}
+
+.padding--r-mod() {
+  @media (min-width: @desktop-width) {
+    padding-right: 225px;
+  }
+}
+
+.making-box-padding() {
+  padding-left: 80px;
+  padding-right: 57px;
+}

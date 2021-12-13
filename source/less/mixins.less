@@ -7,10 +7,35 @@
 // Бледный черный цвет для альтернативного текста и бордера кнопок
 @darklight: #444444;
 
-// Размеры устройств
-@tablet-width: 768px;
-@desktop-width: 1150px;
+// Размеры окон мобилки
+@mobile-width: 320px;
+@mobile-max-width: 500px;
 @mobile-width-only: 767px;
+
+// Размеры окон планшета
+@tablet-width: 768px;
+@tablet-max-width: 900px;
+@tablet-width-only: 1149px;
+
+// Размеры окон десктопа
+@desktop-width: 1150px;
+@desktop-max-width: 1450px;
+
+.config-size-and-position() {
+  outline: 1px solid rgb(255, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @mobile-max-width;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-max-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-max-width;
+  }
+}
 
 .style-common() {
   margin: 0;

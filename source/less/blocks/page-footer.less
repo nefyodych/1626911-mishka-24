@@ -1,15 +1,13 @@
 .page-footer {
-  min-height: 160px;
-
   background-color: #f1f1f1;
 
-  @media (min-width: @tablet-width) {
-    display: flex;
-    min-height: 143px;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+  // @media (min-width: @tablet-width) {
+  //   display: flex;
+  //   min-height: 143px;
+  //   align-items: center;
+  //   padding-left: 50px;
+  //   padding-right: 50px;
+  // }
 }
 
 .page-footer__item {
@@ -87,4 +85,18 @@
 
 .page-footer__link {
   outline: 1px solid @skyblue;
+}
+
+.page-footer__box {
+  .config-size-and-position();
+  width: 100%;
+  min-height: 160px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 143px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

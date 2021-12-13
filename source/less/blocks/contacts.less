@@ -4,13 +4,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    .config-size-and-position();
+    .padding();
+    .padding--l-mod();
     display: grid;
     grid-template-columns: 350px auto;
     grid-template-areas:
       "info map"
       "buttons map";
-    .padding();
-    .padding--l-mod();
   }
 }
 
@@ -109,6 +110,10 @@
   .padding();
   margin-bottom: 62px;
 
+  @media (max-width: @tablet-width-only) {
+    .config-size-and-position();
+  }
+
   @media (min-width: @desktop-width) {
     padding: 79px 0 0 0;
     grid-area: info;
@@ -137,6 +142,10 @@
 
 .contacts__buttons {
   .padding();
+
+  @media (max-width: @tablet-width-only) {
+    .config-size-and-position();
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: buttons;

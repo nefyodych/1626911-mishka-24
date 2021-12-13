@@ -11,51 +11,54 @@
 <body>
   <!-- Хэдер - лого навигация -->
   <header class="page-header">
-    <a class="page-header__link" title="Вы сейчас находитесь на главной странице">
-      <svg class="page-header__logo" width="86" height="35">
-        <use xlink:href="#"></use>
-      </svg>
-      <span class="visually-hidden">Главная страница</span>
-    </a>
-
-    <button class="page__button-nav" type="button">
-      <span class="visually-hidden">Открыть/Закрыть меню</span>
-    </button>
-
     <nav class="main-nav">
+      <!-- Логотип -->
+      <a class="main-nav__link" title="Вы сейчас находитесь на главной странице">
+        <svg class="main-nav__logo" width="86" height="35">
+          <use xlink:href="#"></use>
+        </svg>
+        <span class="visually-hidden">Главная страница</span>
+      </a>
+      <!-- Кнопка бургер меню -->
+      <button class="main-nav__button-nav" type="button">
+        <svg class="main-nav__button-icon-open" aria-hidden="true" focusable="false" width="20" height="14"
+          fill="#000000" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0H0v2h20V0ZM20 6H0v2h20V6ZM20 12H0v2h20v-2Z" />
+        </svg>
+        <svg class="main-nav__button-icon-close main-nav__button-icon-hidden" aria-hidden="true" focusable="false"
+          width="21" height="21" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 1.37 19.57 0l-9.02 8.59L1.43 0 0 1.37l9.01 8.68L0 18.63 1.43 20l9.12-8.59L19.57 20 21 18.63l-9.01-8.58L21 1.37Z" />
+        </svg>
+        <span class="visually-hidden">Открыть/Закрыть меню</span>
+      </button>
+      <!-- Меню навигации -->
       <div class="main-nav__wrapper main-nav__wrapper--hidden">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--logo">
-            <a class="site-list__link" title="Вы сейчас находитесь на главной странице">
-              <svg class="site-list__logo" width="113" height="46">
-                <use xlink:href="#"></use>
-              </svg>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item main-nav__list-item--catalog">
+            <a class="main-nav__list-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--order">
+            <a class="main-nav__list-link" href="order.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--new">
+            <a class="main-nav__list-link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--sale">
+            <a class="main-nav__list-link" href="#">Распродажа</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--post">
+            <span class="main-nav__list-info"> Бесплатная доставка по России</span>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--search">
+            <a class="main-nav__list-link main-nav__list-icon main-nav__list-icon--search" href="#">
+              <span class="main-nav__text-search">Поиск по сайту</span>
             </a>
           </li>
-          <li class="site-list__item site-list__item--catalog">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item site-list__item--order">
-            <a class="site-list__link" href="order.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item site-list__item--search">
-            <a class="site-list__link site-list__icon site-list__icon--search" href="#">
-              <span class="site-list__text--search">Поиск по сайту</span>
+          <li class="main-nav__list-item main-nav__list-item--buy">
+            <a class="main-nav__list-link main-nav__list-icon main-nav__list-icon--buy" href="#">
+              <span class="main-nav__text-buy">Корзина: пока пуста</span>
             </a>
-          </li>
-          <li class="site-list__item site-list__item--buy">
-            <a class="site-list__link site-list__icon site-list__icon--buy" href="#">
-              <span class="site-list__icon--buy">Корзина: пока пуста</span>
-            </a>
-          </li>
-          <li class="site-list__item site-list__item--new">
-            <a class="site-list__link" href="#">Новые поступления</a>
-          </li>
-          <li class="site-list__item site-list__item--sale">
-            <a class="site-list__link" href="#">Распродажа</a>
-          </li>
-          <li class="site-list__item site-list__item--post">
-            <span class="site-list__info"> Бесплатная доставка по России</span>
           </li>
         </ul>
       </div>
@@ -69,7 +72,7 @@
       <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
     </div>
     <!-- Секция категорий товаров -->
-    <section class="category">
+    <section class="category page-main__category">
       <h2 class="visually-hidden">Выбор категории товаров</h2>
       <ul class="category__list">
         <li class="category__item category__item--interior">
@@ -82,10 +85,10 @@
     </section>
 
     <!-- Товар недели -->
-    <section class="promo container">
+    <section class="promo page-main__promo container container--l-mod">
       <div class="promo__heading">
         <h2 class="title-common promo__title">Вязаные корзинки</h2>
-        <p class="promo__subtitle">Товар недели</p>
+        <p class="promo__subtitle">Товар <br> недели</p>
       </div>
       <div class="promo__content">
         <div class="promo__desc">
@@ -107,7 +110,7 @@
           </ul>
         </div>
         <div class="promo__ware">
-          <img class="promo__images" src="../img/main/yarn-common.jpg" alt="Изображение пряжи" width="260" height="315">
+          <img class="promo__images" src="img/main/yarn-common.jpg" alt="Изображение пряжи" width="260" height="315">
         </div>
         <div class="promo__buy">
           <p class="promo__buy-price">Цена: 990 руб.</p>
@@ -117,7 +120,7 @@
     </section>
 
     <!-- О нас -->
-    <aside class="about container">
+    <aside class="about page-main__about container container--l-mod">
       <h2 class="title-common about__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item about__item--flower">
@@ -142,14 +145,14 @@
     </aside>
 
     <!-- Отзывы -->
-    <section class="review container">
+    <section class="review page-main__review container container--l-mod">
       <h2 class="title-common review__title">Отзывы</h2>
       <p class="review__text">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
         инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
         стильными, а также набирают больше лайков!
       </p>
-      <div class="reviews__box">
+      <div class="review__box">
         <div class="review__author">
           <p class="review__name">Анастасия Красильникова</p>
           <p class="review__social">@misssssiskras</p>
@@ -173,9 +176,12 @@
     </section>
 
     <!-- Контакты -->
-    <section class="contacts">
-      <div class="container">
-        <h2 class="title-common contacts__title">Контакты</h2>
+    <section class="contacts page-main__contacts">
+      <div class="contacts__info">
+        <div class="contacts__box">
+          <h2 class="title-common contacts__title">Контакты</h2>
+          <span class="contacts__decor-img"></span>
+        </div>
         <div class="contacts__desc">
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -189,70 +195,67 @@
           </ul>
         </div>
       </div>
-      <div class="contacts__maps">
-        <a class="contacts__maps-link" href="https://yandex.ru/maps/-/CCUujFWPgB" target="_blank">
-          <picture>
-            <source media="(min-width: 768px)" srcset="../img/main/map-tablet.jpg">
-            <source media="(min-width: 1050px)" srcset="../img/main/map-desktop.jpg">
-            <img class="contacts__maps-img" src="../img/main/map-mobile.jpg" alt="Карта проезда" width="320"
-              height="454">
-          </picture>
-        </a>
+      <div class="contacts__map" width="320" height="454">
+        <iframe class="contacts__map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3909.657073905583!2d60.55418218400078!3d56.85309611421871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1639129678792!5m2!1sru!2sru"
+          width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-      <button class="button button-contacts" type="button">Напишите нам</button>
+      <div class="contacts__buttons">
+        <a class="button button--contacts" href="#">Напишите нам</a>
+      </div>
     </section>
   </main>
 
   <!-- Футер -->
   <footer class="page-footer">
-
-    <div class="page-footer__item page-footer__item--logo">
-      <a class="page-footer__link" title="Вы сейчас находитесь на главной странице">
-        <svg class="page-footer__img" width="113" height="46">
-          <use xlink:href="#"></use>
-        </svg>
-      </a>
+    <div class="page-footer__box">
+      <div class="page-footer__item page-footer__item--logo">
+        <a class="page-footer__link" title="Вы сейчас находитесь на главной странице">
+          <svg class="page-footer__img" width="113" height="46">
+            <use xlink:href="#"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="page-footer__item page-footer__item--social">
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a target="_blank" href="#">
+              <svg class="page-footer__social-icon" width="30" height="30">
+                <use xlink:href="#"></use>
+              </svg>
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a target="_blank" href="#">
+              <svg class="page-footer__social-icon" width="30" height="30">
+                <use xlink:href="#"></use>
+              </svg>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a target="_blank" href="#">
+              <svg class="page-footer__social-icon" width="30" height="30">
+                <use xlink:href="#"></use>
+              </svg>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__item page-footer__item--copyright">
+        <a class="page-footer__copyright-link" target="_blank" href="https://htmlacademy.ru/">
+          <span class="page-footer__copyright-text">Разработано</span>
+          <svg class="page-footer__copyright-icon" width="27" height="35">
+            <use xlink:href="#"></use>
+          </svg>
+        </a>
+      </div>
     </div>
-
-    <div class="page-footer__item page-footer__item--social">
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a target="_blank" href="#">
-            <svg class="page-footer__social-icon" width="30" height="30">
-              <use xlink:href="#"></use>
-            </svg>
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a target="_blank" href="#">
-            <svg class="page-footer__social-icon" width="30" height="30">
-              <use xlink:href="#"></use>
-            </svg>
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a target="_blank" href="#">
-            <svg class="page-footer__social-icon" width="30" height="30">
-              <use xlink:href="#"></use>
-            </svg>
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="page-footer__item page-footer__item--copyright">
-      <a class="page-footer__copyright-link" target="_blank" href="https://htmlacademy.ru/">
-        <span class="page-footer__copyright-text">Разработано</span>
-        <svg class="page-footer__copyright-icon" width="27" height="35">
-          <use xlink:href="#"></use>
-        </svg>
-      </a>
-    </div>
-
   </footer>
 </body>
+
+<script src="js/burger-menu.js"></script>
 
 </html>

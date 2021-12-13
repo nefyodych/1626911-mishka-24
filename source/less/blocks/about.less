@@ -1,9 +1,7 @@
 .about {
-  margin-bottom: 30px;
-
   @media (min-width: @tablet-width) {
     padding-top: 62px;
-    margin-bottom: 62px;
+    padding-bottom: 30px;
   }
 }
 
@@ -11,7 +9,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 40px;
+    gap: 40px 50px;
   }
 }
 
@@ -33,6 +31,10 @@
   margin-bottom: 20px;
 
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 35px;
+  }
 }
 
 .about__item::after {

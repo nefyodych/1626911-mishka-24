@@ -1,28 +1,243 @@
 .main-nav {
-  position: absolute;
-  top: calc(100% + 1px);
-  right: 0;
-  z-index: 1;
-
-  width: 100%;
-
-  background-color: #ffffff;
-  outline: 1px solid @border;
+  position: relative;
+  min-height: 78px;
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
     outline: none;
-    top: 0;
-    left: 0;
   }
 }
 
-.main-nav__wrapper {
-  width: 100%;
-  margin: 0 auto;
+.main-nav__link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  outline: 1px solid @skyblue;
 
   @media (min-width: @tablet-width) {
-    box-sizing: border-box;
-    padding: 0 50px;
+    left: 0;
+    top: calc(88px / 2);
+    transform: translate(0, -50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.main-nav__button-nav {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__logo {
+  display: block;
+}
+
+.main-nav__button-icon-hidden {
+  display: none;
+}
+
+// Сама навигация
+.main-nav__wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 2;
+
+  min-width: 320px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  border: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.main-nav__wrapper--hidden {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 167px 155px auto 83px 265px;
+    grid-template-rows: 88px 68px;
+    align-items: center;
+    grid-template-areas:
+      "logo . . search  buy"
+      "catalog order . . post ";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 184px 230px auto 83px 265px;
+    grid-template-areas:
+      "catalog order  logo search  buy"
+      "new sale . . post ";
+  }
+}
+
+.main-nav__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  min-height: 80px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid @border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: auto;
+    min-height: 100%;
+
+    border: none;
+  }
+}
+
+.main-nav__list-link {
+  padding: 20px 20px 20px 76px;
+  width: 100%;
+
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 0;
+  }
+}
+
+.main-nav__list-item--catalog {
+  @media (min-width: @tablet-width) {
+    grid-area: catalog;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.main-nav__list-item--order {
+  @media (min-width: @tablet-width) {
+    grid-area: order;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 35px;
+    font-size: inherit;
+    line-height: inherit;
+    border-left: 1px solid @border;
+  }
+}
+
+.main-nav__list-item--search {
+  @media (min-width: @tablet-width) {
+    grid-area: search;
+    border-left: 1px solid @border;
+  }
+}
+
+.main-nav__list-item--buy {
+  @media (min-width: @tablet-width) {
+    grid-area: buy;
+    border-left: 1px solid @border;
+  }
+}
+
+.main-nav__list-item--post {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inherit;
+    grid-area: post;
+  }
+}
+
+.main-nav__list-item--sale {
+  @media (min-width: @desktop-width) {
+    padding-left: 35px;
+    grid-area: sale;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__list-item--new {
+  @media (min-width: @desktop-width) {
+    grid-area: new;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__list-item--new,
+.main-nav__list-item--sale {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inherit;
+  }
+}
+
+.main-nav__list-icon::before {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid @skyblue;
+  content: "";
+}
+
+.main-nav__text-search {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.main-nav__text-buy {
+  @media (min-width: @tablet-width) {
+    padding-left: 80px;
   }
 }

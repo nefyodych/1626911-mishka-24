@@ -1,8 +1,6 @@
 .promo {
-  margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 62px;
+  @media (min-width: @desktop-width) {
+    position: relative;
   }
 }
 
@@ -12,10 +10,15 @@
     justify-content: space-between;
     margin-bottom: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 60px;
+  }
 }
 
 .promo__list {
-  margin: 0 auto;
+  margin: 0 auto 25px;
   max-width: 320px;
 }
 
@@ -37,15 +40,33 @@
   @media (min-width: @tablet-width) {
     display: block;
 
-    width: 100px;
+    width: 175px;
     height: fit-content;
     margin: auto 0;
 
     text-align: center;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: -175px;
+
+    padding: 10px 0;
+  }
+}
+
+.promo__subtitle br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .promo__content {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 292px auto 333px;
@@ -54,6 +75,10 @@
       "desc . ware"
       "desc . ware"
       "buy . ware";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 292px auto 525px;
   }
 }
 
@@ -64,12 +89,15 @@
   @media (min-width: @tablet-width) {
     grid-area: desc;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 176px;
+  }
 }
 
 .promo__ware {
   margin: 0 auto 25px;
-  display: flex;
-  justify-content: center;
+  max-width: 450px;
 
   @media (min-width: @tablet-width) {
     grid-area: ware;
@@ -113,6 +141,11 @@
   max-width: 525px;
   width: 100%;
   height: auto;
+
+  @media (min-width: @desktop-width) {
+    width: 535px;
+    height: 636px;
+  }
 }
 
 .promo__buy-price {

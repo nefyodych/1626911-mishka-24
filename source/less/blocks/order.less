@@ -11,8 +11,8 @@
 }
 
 .order__list {
-  margin-bottom: 30px;
   .padding();
+  margin-bottom: 30px;
 
   &:last-of-type {
     margin-bottom: 17px;
@@ -40,26 +40,28 @@
 .order__type-list--color {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 260px);
     gap: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 260px);
+  }
+
+  @media (min-width: @desktop-max-width) {
+    grid-template-columns: repeat(5, 260px);
   }
 }
 
 .order__features {
+  .config-size-and-position();
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
-
   border: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    margin: 0 auto 5px;
+    margin-bottom: 5px;
   }
 }
 
@@ -230,6 +232,7 @@
 }
 
 .order__bottom {
+  .config-size-and-position();
   padding: 0 30px;
 
   @media (min-width: @tablet-width) {

@@ -140,7 +140,7 @@
   display: block;
 }
 
-.contacts__buttons {
+.contacts__post {
   .padding();
 
   @media (max-width: @tablet-width-only) {
@@ -151,5 +151,11 @@
     grid-area: buttons;
     margin-top: auto;
     padding: 0;
+  }
+}
+
+.contacts__button {
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

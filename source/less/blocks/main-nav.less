@@ -28,7 +28,7 @@
   }
 }
 
-.main-nav__button-nav {
+.main-nav__toggle {
   position: absolute;
   right: 20px;
   top: 50%;
@@ -46,12 +46,37 @@
   }
 }
 
-.main-nav__logo {
-  display: block;
+.main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
-.main-nav__button-icon-hidden {
-  display: none;
+.main-nav__toggle--open {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(45deg);
+    width: 28px;
+    left: 5px;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__logo {
+  display: block;
 }
 
 // Сама навигация

@@ -11,7 +11,6 @@
 }
 
 .order__list {
-  .padding();
   margin-bottom: 30px;
 
   &:last-of-type {
@@ -19,12 +18,46 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 50px;
     box-sizing: border-box;
 
     &:nth-child(2n) {
       background-color: #f1f1f1;
     }
+  }
+}
+
+.order__features--contacts:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.order__type-list {
+  width: 100%;
+}
+
+.order__type-list--color {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    gap: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.order__features {
+  .padding();
+  .config-size-and-position();
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px;
+    flex-direction: row;
+    margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,35 +66,9 @@
   }
 }
 
-.order__features--contacts:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.order__type-list--color {
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 260px);
-    gap: 25px;
-  }
-
+.order__features--color {
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 260px);
-  }
-
-  @media (min-width: @desktop-max-width) {
-    grid-template-columns: repeat(5, 260px);
-  }
-}
-
-.order__features {
-  .config-size-and-position();
-  display: flex;
-  flex-direction: column;
-  border: none;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    margin-bottom: 5px;
+    padding-right: 90px;
   }
 }
 
@@ -138,7 +145,7 @@
 .order__type-list--color .order__type-item {
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    width: 260px;
+    max-width: 260px;
   }
 }
 
@@ -240,5 +247,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+  }
+}
+
+.order__button {
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin: 0 20px 0 0;
+    order: -1;
   }
 }

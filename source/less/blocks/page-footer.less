@@ -2,6 +2,21 @@
   background-color: #f1f1f1;
 }
 
+.page-footer__box {
+  .config-size-and-position();
+  width: 100%;
+  min-height: 160px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 143px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+}
+
 .page-footer__item {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +34,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    width: 33%;
+    width: 30%;
     border-bottom: 0;
   }
 }
@@ -77,18 +92,4 @@
 
 .page-footer__link {
   outline: 1px solid @skyblue;
-}
-
-.page-footer__box {
-  .config-size-and-position();
-  width: 100%;
-  min-height: 160px;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    min-height: 143px;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }

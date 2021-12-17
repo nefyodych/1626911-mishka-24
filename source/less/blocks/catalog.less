@@ -44,6 +44,10 @@
     margin: 0 auto;
     justify-content: start;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__box {
@@ -81,10 +85,6 @@
   }
 }
 
-.catalog__item:last-child {
-  margin-bottom: 0;
-}
-
 .catalog__link {
   display: block;
   margin-bottom: 27px;
@@ -106,6 +106,14 @@
     line-height: 24px;
     text-align: start;
   }
+}
+
+.catalog__item:hover .catalog__title {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog__item:active .catalog__title {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog__subtitle {
@@ -175,4 +183,9 @@
   margin: 0;
 
   border: 1px solid @skyblue;
+}
+
+.catalog__link-dubl {
+  text-decoration: none;
+  color: inherit;
 }

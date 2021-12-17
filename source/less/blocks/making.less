@@ -141,3 +141,37 @@
     width: 100%;
   }
 }
+
+.making__link {
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    content: "";
+
+    width: 101px;
+    height: 77px;
+
+    background-image: url("../img/svg_icon/play.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.05s linear;
+  }
+
+  &:hover::after {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active::after {
+    width: 101px;
+    height: 77px;
+    opacity: 0.8;
+  }
+}

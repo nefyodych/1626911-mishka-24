@@ -68,27 +68,28 @@
   box-sizing: border-box;
   min-height: 96px;
 
+  &::before {
+    position: absolute;
+    left: 34px;
+
+    width: 32px;
+    height: 22px;
+
+    content: "";
+    background-image: url("../img/svg_icon/video.svg");
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: title;
     .making-box-padding();
     padding-top: 96px;
     padding-bottom: 0;
-  }
-}
 
-.making__item-title::before {
-  position: absolute;
-  left: 34px;
-
-  width: 32px;
-  height: 22px;
-
-  content: "";
-  outline: 1px solid @skyblue;
-
-  @media (min-width: @desktop-width) {
-    left: 80px;
-    top: 47px;
+    &::before {
+      left: 80px;
+      top: 47px;
+    }
   }
 }
 

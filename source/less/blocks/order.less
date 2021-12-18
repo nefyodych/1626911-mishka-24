@@ -26,10 +26,6 @@
   }
 }
 
-.order__features--contacts:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .order__type-list {
   width: 100%;
 }
@@ -66,10 +62,33 @@
   }
 }
 
+.order__features--contacts {
+  &:not(:first-child) {
+    padding-top: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+  }
+}
+
 .order__features--color {
   @media (min-width: @desktop-width) {
     padding-right: 90px;
   }
+}
+
+.order__list--contacts {
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.order__list--contacts .order__features {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .order__box {
@@ -155,12 +174,30 @@
   min-height: 38px;
   border: 2px solid #000000;
   margin-right: 20px;
-}
 
-.order__clickbox-mark--radio {
-  min-width: 42px;
-  min-height: 42px;
-  border-radius: 50%;
+  @media (min-width: @tablet-width) {
+    min-width: 52px;
+    min-height: 52px;
+  }
+
+  &:hover {
+    border-color: @skyblue;
+  }
+
+  &:active {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--radio {
+    min-width: 42px;
+    min-height: 42px;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      min-width: 52px;
+      min-height: 52px;
+    }
+  }
 }
 
 .order__clickbox-input[type="radio"]:checked + .order__clickbox-mark--radio::before {
@@ -175,6 +212,11 @@
   background-color: @skyblue;
   border-radius: 50%;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    min-width: 22px;
+    min-height: 22px;
+  }
 }
 
 .order__clickbox-input[type="checkbox"]:checked + .order__clickbox-mark--checkbox::before {
@@ -183,10 +225,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
 
-  background-color: @darklight;
+  background-image: url("../img/svg_icon/checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   content: "";
 }
 
@@ -209,10 +253,16 @@
 
   background-color: transparent;
   border: none;
+  outline: none;
   border-bottom: 2px solid #000000;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: @skyblue;
   }
 }
 
@@ -221,10 +271,16 @@
   padding: 17px;
 
   border: 2px solid @darklight;
+  outline: none;
   resize: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: @skyblue;
   }
 }
 

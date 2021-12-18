@@ -35,16 +35,40 @@
   @media (min-width: @tablet-width) {
     padding-right: 35px;
   }
-}
 
-.about__item::after {
-  position: absolute;
-  top: 0;
-  left: 0;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  width: 55px;
-  height: 38px;
+    width: 55px;
+    height: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
 
-  background-color: @skyblue;
-  content: "";
+  &--flower::after {
+    background-image: url("../img/svg_icon/about/flower.svg");
+  }
+
+  &--money::after {
+    background-image: url("../img/svg_icon/about/money.svg");
+  }
+
+  &--like::after {
+    background-image: url("../img/svg_icon/about/like.svg");
+  }
+
+  &--tangle::after {
+    background-image: url("../img/svg_icon/about/tangle.svg");
+  }
+
+  &--rocket::after {
+    background-image: url("../img/svg_icon/about/rocket.svg");
+  }
+
+  &--gift::after {
+    background-image: url("../img/svg_icon/about/gift.svg");
+  }
 }

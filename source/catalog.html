@@ -76,8 +76,12 @@
             <div class="catalog__images">
               <a class="catalog__link-picture" href="#">
                 <picture>
-                  <img class="catalog__link-images" src="img/catalog/catalog-1-mobile.jpg" alt="Зайчик-попрыгайчик"
-                    width="260" height="195">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/catalog/catalog-1-desktop@1x.jpg 1x, img/catalog/catalog-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/catalog/catalog-1-tablet@1x.jpg 1x, img/catalog/catalog-1-tablet@2x.jpg 2x">
+                  <img class="catalog__link-images" src="img/catalog/catalog-1-mobile@1x.jpg"
+                    srcset="img/catalog/catalog-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="260" height="195">
                 </picture>
               </a>
             </div>
@@ -104,8 +108,12 @@
             <div class="catalog__images">
               <a class="catalog__link" href="#">
                 <picture>
-                  <img class="catalog__link-images" src="img/catalog/catalog-2-mobile.jpg" alt="Корзинка для белья"
-                    width="260" height="195">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/catalog/catalog-2-desktop@1x.jpg 1x, img/catalog/catalog-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/catalog/catalog-2-tablet@1x.jpg 1x, img/catalog/catalog-2-tablet@2x.jpg 2x">
+                  <img class="catalog__link-images" src="img/catalog/catalog-2-mobile@1x.jpg"
+                    srcset="img/catalog/catalog-2-mobile@2x.jpg 2x" alt="Корзинка для белья" width="260" height="195">
                 </picture>
               </a>
             </div>
@@ -132,8 +140,13 @@
             <div class="catalog__images">
               <a class="catalog__link" href="#">
                 <picture>
-                  <img class="catalog__link-images" src="img/catalog/catalog-3-mobile.jpg" alt="Корзинка для белья"
-                    width="260" height="195">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/catalog/catalog-3-desktop@1x.jpg 1x, img/catalog/catalog-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/catalog/catalog-3-tablet@1x.jpg 1x, img/catalog/catalog-3-tablet@2x.jpg 2x">
+                  <img class="catalog__link-images" src="img/catalog/catalog-3-mobile@1x.jpg"
+                    srcset="img/catalog/catalog-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек" width="260"
+                    height="195">
                 </picture>
               </a>
             </div>
@@ -164,7 +177,14 @@
         </div>
         <div class="making__item-video">
           <a class="making__link" href="#">
-            <img class="making__preview" src="img/other/preview-process-mobile.jpg" alt="" width="260" height="150">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="img/video_preview/video-desktop@1x.jpg 1x, img/video_preview/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/video_preview/video-tablet@1x.jpg 1x, img/video_preview/video-tablet@2x.jpg 2x">
+              <img class="making__preview" src="img/video_preview/video-mobile@1x.jpg"
+                srcset="img/video_preview/video-mobile@2x.jpg 2x" alt="Видео превью" width="260" height="150">
+            </picture>
           </a>
         </div>
         <div class="making__item-info">

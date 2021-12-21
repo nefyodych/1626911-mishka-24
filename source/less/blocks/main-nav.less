@@ -14,8 +14,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  outline: 1px solid @skyblue;
-
   @media (min-width: @tablet-width) {
     left: 0;
     top: calc(88px / 2);
@@ -77,6 +75,16 @@
 
 .main-nav__logo {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 114px;
+    height: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
+  }
 }
 
 // Сама навигация

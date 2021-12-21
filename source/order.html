@@ -18,9 +18,11 @@
     <nav class="main-nav">
       <!-- Логотип -->
       <a class="main-nav__link" title="Вы сейчас находитесь на главной странице">
-        <svg class="main-nav__logo" width="86" height="35">
-          <use xlink:href="#"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="/img/logo-nav/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="/img/logo-nav/logo-tablet.svg">
+          <img class="main-nav__logo" src="/img/logo-nav/logo-mobile.svg" alt="LOGO" width="86" height="35">
+        </picture>
         <span class="visually-hidden">Главная страница</span>
       </a>
       <!-- Кнопка бургер меню -->

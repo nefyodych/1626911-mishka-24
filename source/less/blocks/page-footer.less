@@ -75,9 +75,17 @@
     fill: @skyblue;
   }
 
-  &:active {
+  &:hover > .page-footer__icon--copyright {
+    fill: @skyblue-d;
+  }
+
+  &:active > .page-footer__icon {
     opacity: 0.3;
   }
+}
+
+.page-footer__icon--copyright {
+  fill: @skyblue;
 }
 
 .page-footer__item--logo .page-footer__link {

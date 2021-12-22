@@ -82,3 +82,48 @@
     right: 50px;
   }
 }
+
+.review__button-arrow {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  min-height: 52px;
+
+  border: 1px solid #ececec;
+  margin-left: -1px;
+  cursor: pointer;
+
+  background-color: transparent;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../img/svg_icon/review-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &:first-child {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}

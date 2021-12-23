@@ -5,9 +5,14 @@
   @media (min-width: @tablet-width) {
     position: relative;
 
-    background-image: url("../img/other/review-tablet.jpg");
+    background-image: url("../img/review/review-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review/review-tablet@2x.jpg");
+    }
   }
 }
 

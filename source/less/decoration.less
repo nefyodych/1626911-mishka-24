@@ -11,8 +11,10 @@
 
       height: 25px;
 
-      background: url("../img/decoration/zigzag-fill-tablet.svg") no-repeat;
-      background-size: 100% 100%;
+      background-image: url("../img/decoration/zigzag-fill.svg");
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: contain;
     }
   }
 
@@ -21,9 +23,6 @@
       bottom: -18px;
 
       height: 34px;
-
-      background: url("../img/decoration/zigzag-fill-desktop.svg") no-repeat;
-      background-size: 100% 100%;
     }
   }
 }
@@ -41,17 +40,16 @@
 
       height: 17px;
 
-      background: url("../img/decoration/zigzag-line-tablet.svg") no-repeat;
-      background-size: 100% 100%;
+      background-image: url("../img/decoration/zigzag-line.svg");
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: contain;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::after {
       height: 23px;
-
-      background: url("../img/decoration/zigzag-line-desktop.svg") no-repeat;
-      background-size: 100% 100%;
     }
   }
 }

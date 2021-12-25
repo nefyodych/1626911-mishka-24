@@ -9,7 +9,8 @@
   min-height: 177px;
 
   @media (min-width: @tablet-width) {
-    min-height: 238px;
+    min-height: 170px;
+    align-items: inherit;
   }
 }
 
@@ -30,11 +31,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 155px 50px 50px;
+    padding: 87px 50px 50px;
     min-height: 626px;
 
     background-size: @tablet-width;
     background-image: url("../img/intro/intro-tablet@1x.jpg");
+    background-position: center top -64px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro/intro-tablet@2x.jpg");

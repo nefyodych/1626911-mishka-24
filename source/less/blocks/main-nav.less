@@ -16,7 +16,7 @@
     grid-template-columns: minmax(50px, auto) minmax(405px, 485px) 180px minmax(405px, 485px) minmax(50px, auto);
     grid-template-areas:
       " block6 block2 block1 block4 block7 "
-      " . block3 . block5 . ";
+      " . block3 block3 block5 . ";
   }
 }
 
@@ -75,6 +75,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: -30px;
+
     background-color: #ffffff;
   }
 }
@@ -89,6 +91,10 @@
 
     margin-left: -10px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -30px;
+  }
 }
 
 .main-nav__block4 {
@@ -97,7 +103,7 @@
 
     display: flex;
     justify-content: flex-end;
-    margin-right: -10px;
+    margin-right: -30px;
 
     background-color: #ffffff;
   }
@@ -166,11 +172,16 @@
   border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
-    width: fit-content;
+    width: 167px;
     min-height: 68px;
-    min-width: 50%;
+    margin: 0;
 
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 218px;
+    min-width: inherit;
   }
 }
 
@@ -182,6 +193,11 @@
 
   @media (min-width: @desktop-width) {
     font-size: inherit;
+    border-right: 1px solid @border;
+
+    &:last-child {
+      border: none;
+    }
   }
 }
 
@@ -214,6 +230,10 @@
     padding: 20px 10px;
 
     width: inherit;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 30px;
   }
 
   &:hover {
@@ -330,6 +350,8 @@
 .main-nav__list-item--buy {
   @media (min-width: @tablet-width) {
     border-left: 1px solid @border;
+
+    width: 296px;
   }
 }
 

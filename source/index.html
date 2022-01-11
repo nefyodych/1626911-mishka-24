@@ -5,11 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка: главная страница</title>
+  <!-- Иконки -->
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicon-svg/" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-svg/favicon-svg.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon-img/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest"> <!-- 192×192, 512x512 -->
-  <link href="css/style.min.css" rel="stylesheet">
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Предзагрузки -->
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/burger-menu.js" as="script">
 </head>
 
 <body>
@@ -143,7 +150,8 @@
             <source media="(min-width: 768px)"
               srcset="img/promo-img-webp/promo-tablet@1x.jpg 1x, img/promo-img-webp/promo-tablet@2x.jpg 2x">
             <img class="promo__images" src="img/promo-img-webp/promo-mobile@1x.jpg"
-              srcset="img/promo-img-webp/promo-mobile@2x.jpg 2x" alt="Изображение пряжи" width="260" height="315">
+              srcset="img/promo-img-webp/promo-mobile@2x.jpg 2x" alt="Изображение пряжи" width="260" height="315"
+              loading="lazy">
           </picture>
         </div>
         <div class="promo__buy">

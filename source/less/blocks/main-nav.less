@@ -128,13 +128,20 @@
 }
 
 .main-nav__blockR,
-.main-nav__blockL,
-.main-nav__blockC {
+.main-nav__blockL {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+.main-nav__blockL {
+  grid-area: blockL;
+}
+
+.main-nav__blockR {
+  grid-area: blockR;
 }
 
 .main-nav__logo-img {

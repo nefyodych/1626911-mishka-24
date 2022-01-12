@@ -30,20 +30,25 @@
 .decoration-line {
   position: relative;
 
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -43px;
+    content: "";
+
+    height: 7px;
+
+    background-image: url("../img/decoration-site-svg/zigzag-line.svg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+
   @media (min-width: @tablet-width) {
     &::after {
-      position: absolute;
-      left: 0;
-      right: 0;
       bottom: -70px;
-      content: "";
-
       height: 17px;
-
-      background-image: url("../img/decoration-site-svg/zigzag-line.svg");
-      background-position: center;
-      background-repeat: repeat-x;
-      background-size: contain;
     }
   }
 

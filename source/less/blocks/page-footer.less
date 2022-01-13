@@ -8,12 +8,14 @@
   min-height: 160px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 31% 40% 29%;
     min-height: 143px;
-    align-items: center;
+    // align-items: center;
     padding-left: 50px;
     padding-right: 50px;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 }
 
@@ -33,8 +35,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    width: 30%;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding-bottom: 10px;
+
     border-bottom: 0;
   }
 }
@@ -90,7 +95,7 @@
 }
 
 .page-footer__item--logo .page-footer__link {
-  padding: 15px 0;
+  padding: 22px 0 12px;
 }
 
 .page-footer__item--social .page-footer__link {

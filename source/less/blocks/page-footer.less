@@ -8,14 +8,16 @@
   min-height: 160px;
 
   @media (min-width: @tablet-width) {
-    // display: flex;
     display: grid;
     grid-template-columns: 31% 40% 29%;
     min-height: 143px;
-    // align-items: center;
     padding-left: 50px;
     padding-right: 50px;
-    // justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    grid-template-columns: 35% 30% 30%;
   }
 }
 

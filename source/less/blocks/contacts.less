@@ -12,6 +12,8 @@
     grid-template-areas:
       "info map"
       "buttons map";
+
+    padding-top: 99px;
   }
 }
 
@@ -62,6 +64,11 @@
     height: 100%;
     background-image: url("../img/decoration-site-svg/flag.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: -5px;
+      left: 8px;
+    }
   }
 }
 
@@ -107,6 +114,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     padding-bottom: 24px;
+    margin-bottom: 6px;
   }
 }
 

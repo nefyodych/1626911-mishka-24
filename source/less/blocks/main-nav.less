@@ -6,10 +6,10 @@
     position: static;
 
     display: grid;
-    grid-template-columns: minmax(50px, auto) minmax(320px, 384px) 100px minmax(248px, 316px) minmax(50px, auto);
+    grid-template-columns: minmax(50px, auto) minmax(120px, 184px) 150px 150px minmax(248px, 316px) minmax(50px, auto);
     grid-template-areas:
-      " blockL block1 block4 block4 blockR "
-      " . block2 block2 block5 . ";
+      " blockL block1 block4 block4 block4 blockR "
+      " . block2 block2 block2 block5 . ";
   }
 
   @media (min-width: @desktop-width) {
@@ -181,7 +181,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 218px;
+    width: 220px;
     min-width: inherit;
   }
 }
@@ -229,8 +229,6 @@
 
   @media (min-width: @tablet-width) {
     padding: 20px 10px;
-
-    width: inherit;
   }
 
   @media (min-width: @desktop-width) {
@@ -355,6 +353,10 @@
     border-left: 1px solid @border;
 
     width: 294px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 296px;
   }
 }
 

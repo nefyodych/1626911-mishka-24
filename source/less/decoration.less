@@ -10,10 +10,9 @@
       content: "";
 
       height: 21px;
-      transform: translateX(-18px);
 
       background-image: url("../img/decoration-site-svg/zigzag-fill.svg");
-      background-position: center;
+      background-position: center left -5px;
       background-repeat: repeat-x;
       background-size: contain;
     }
@@ -21,9 +20,11 @@
 
   @media (min-width: @desktop-width) {
     &::after {
+      background-position: center left 5px;
+
       bottom: -14px;
 
-      height: 34px;
+      height: 31px;
     }
   }
 }
@@ -57,7 +58,7 @@
   @media (min-width: @desktop-width) {
     &::after {
       height: 23px;
-      bottom: -97px;
+      bottom: -93px;
       left: 50px;
       right: 50px;
     }

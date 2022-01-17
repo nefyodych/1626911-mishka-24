@@ -9,7 +9,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 31% 40% 29%;
+    grid-template-columns: 30% 40% 30%;
     min-height: 143px;
     padding-left: 50px;
     padding-right: 50px;
@@ -49,6 +49,14 @@
 .page-footer__social-list {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 1px;
+  }
 }
 
 .page-footer__item--logo {
@@ -121,4 +129,8 @@
   line-height: 18px;
 
   margin-right: 27px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
+  }
 }

@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
-  min-height: 374px;
+  margin-bottom: 31px;
+  min-height: 373px;
 
   outline: 1px solid @border;
 
@@ -35,6 +35,8 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     min-height: 334px;
+
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
@@ -67,7 +69,7 @@
 
 .catalog__box--inform {
   @media (min-width: @tablet-width) {
-    padding-top: 30px;
+    padding-top: 28px;
   }
 }
 
@@ -99,12 +101,14 @@
 
   font-size: 17px;
   line-height: 24px;
-  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
-    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 4px;
   }
 }
 
@@ -126,27 +130,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 13px 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 33px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: auto;
+
+    padding: 11px 28px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+    right: 30px;
+    content: "";
+
+    height: 1px;
+
+    background-color: @border;
+
+    @media (min-width: @desktop-width) {
+      top: -3px;
+    }
   }
 }
 
-.catalog__buy::after {
-  position: absolute;
-  top: 0;
-  left: 30px;
-  right: 30px;
-  content: "";
-
-  height: 1px;
-
-  background-color: @border;
-}
-
 .catalog__description {
-  padding: 0 30px;
+  padding: 0 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px 0 28px;
+  }
 }
 
 .catalog__price {
@@ -172,11 +194,12 @@
 .catalog__button {
   width: 50px;
   height: 50px;
-  margin: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transform: translate(15px, -5px);
 
   &:hover > .catalog__icon {
     fill: @skyblue;
@@ -186,6 +209,10 @@
   &:active > .catalog__icon {
     fill: @skyblue;
     opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translate(11px, -4px);
   }
 }
 

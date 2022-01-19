@@ -1,26 +1,38 @@
 // Отступ на главной странице между блоками
 .page-main__category {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .page-main__promo {
-  margin-bottom: 20px;
+  margin-bottom: 73px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 98px;
+  }
 }
 
 .page-main__about {
-  margin-bottom: 30px;
+  margin-bottom: 56px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 41px;
   }
 }
 
 .page-main__review {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
@@ -29,22 +41,71 @@
 
 .page-main__contacts {
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 // Отступ на странице каталог между блоками
-.page-main__intro {
+.page-main__intro-catalog {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 125px;
+  }
 }
 
 .page-main__catalog {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .page-main__making {
-  margin-bottom: 58px;
+  margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 // Отступ на странице заказа между блоками
+
+.page-main__intro-order {
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 112px;
+  }
+}
+
 .page-main__order {
-  margin-bottom: 60px;
+  margin-bottom: 53px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+  }
 }

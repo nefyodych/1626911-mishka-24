@@ -8,17 +8,17 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 60px;
+    top: 80px;
   }
 }
 
 .promo__list {
-  margin: 0 auto 25px;
+  margin: 0 auto 28px;
   max-width: 320px;
 }
 
@@ -40,16 +40,17 @@
   @media (min-width: @tablet-width) {
     display: block;
 
-    width: 175px;
+    width: 127px;
     height: fit-content;
     margin: auto 0;
 
     text-align: center;
+    line-height: 17px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    left: -175px;
+    left: -156px;
 
     padding: 10px 0;
   }
@@ -91,12 +92,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 176px;
+    margin-top: 173px;
   }
 }
 
 .promo__ware {
-  margin: 0 auto 25px;
+  margin: 0 auto 27px;
   max-width: 450px;
 
   @media (min-width: @tablet-width) {
@@ -118,22 +119,28 @@
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 46px;
+
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
 .promo__item {
   display: flex;
   padding-bottom: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 
   border-bottom: 1px solid @border;
 }
 
 .promo__item span:first-child {
   min-width: 90px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .promo__images {
@@ -142,17 +149,29 @@
   width: 100%;
   height: auto;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 11px;
+  }
+
   @media (min-width: @desktop-width) {
+    padding-top: 19px;
+
     width: 535px;
     height: 636px;
   }
 }
 
 .promo__buy-price {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: @darklight;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+
+    font-size: 20px;
+  }
 }

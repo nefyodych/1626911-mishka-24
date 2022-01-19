@@ -1,15 +1,30 @@
 .about {
   @media (min-width: @tablet-width) {
-    padding-top: 62px;
+    padding-top: 64px;
     padding-bottom: 30px;
   }
 }
 
-.about__list {
+.about__box {
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 50px;
+    display: flex;
+  }
+}
+
+.about__list {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -22,30 +37,43 @@
 
 .about__title {
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+  }
 }
 
 .about__item {
   position: relative;
 
   padding-top: 55px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    padding-right: 35px;
+    padding: 57px 25px 15px 0;
+    margin-bottom: 38px;
   }
 
   &::after {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -6px;
 
     width: 55px;
     height: 38px;
     background-position: center;
     background-repeat: no-repeat;
     content: "";
+
+    @media (min-width: @tablet-width) {
+      left: -3px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--flower::after {

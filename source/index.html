@@ -22,7 +22,7 @@
 <body>
   <!-- Хэдер - лого навигация -->
   <header class="page-header">
-    <nav class="main-nav main-nav__mobile-closed">
+    <nav class="main-nav main-nav--mobile-closed">
 
       <!-- БЛОК-1 Логотип (МТД)-->
       <div class="main-nav__control main-nav__block1">
@@ -157,7 +157,7 @@
         </div>
         <div class="promo__buy">
           <p class="promo__buy-price">Цена: 990 руб.</p>
-          <a class="button promo__button" href="#">Заказать</a>
+          <a class="button promo__button" title="Страница в данный момент недоступна!">Заказать</a>
         </div>
       </div>
     </section>
@@ -196,7 +196,7 @@
       <h2 class="title-common review__title">Отзывы</h2>
       <p class="review__text">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-        <span><br></span></span> у популярных инстамамочек. <span><br></span> В отчаянии, я накупила аксессуаров и
+        <span><br></span> у популярных инстамамочек. <span><br></span> В отчаянии, я накупила аксессуаров и
         игрушек в Мишке, <span><br></span> и мои фотографии сразу стали более стильными, а также набирают больше лайков!
       </p>
       <div class="review__box">
@@ -213,7 +213,7 @@
           </button>
         </div>
       </div>
-      <button class="button review__button" type="button">Написать</button>
+      <a class="button review__button" title="Страница в данный момент недоступна!">Написать</a>
     </section>
 
     <!-- Контакты -->
@@ -236,14 +236,14 @@
           </ul>
         </div>
       </div>
-      <div class="contacts__map" width="320" height="454">
+      <div class="contacts__map">
         <iframe class="contacts__map-frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.5606135529787!2d30.32295089168755!3d59.9386653454175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1641980281199!5m2!1sru!2sru"
-          width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy">
+          width="300" height="300" style="border: 0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
       <div class="contacts__post">
-        <a class="button contacts__button" href="#">Напишите нам</a>
+        <a class="button contacts__button" title="Страница в данный момент недоступна!">Напишите нам</a>
       </div>
     </section>
   </main>
@@ -288,7 +288,7 @@
         </ul>
       </div>
       <div class="page-footer__item page-footer__item--copyright">
-        <a class="page-footer__link" target="_blank" href="https://htmlacademy.ru/">
+        <a class="page-footer__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__copyright-title">Разработано</span>
           <svg class="page-footer__icon page-footer__icon--copyright" width="27" height="35">
             <use xlink:href="img/sprite/sprite.svg#htmlacademy"></use>
@@ -297,8 +297,9 @@
       </div>
     </div>
   </footer>
-</body>
 
-<script src="js/burger-menu.js"></script>
+  <script src="js/burger-menu.js"></script>
+
+</body>
 
 </html>

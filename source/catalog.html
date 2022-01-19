@@ -22,7 +22,7 @@
 <body>
   <!-- Хэдер - лого навигация -->
   <header class="page-header page-header--mod">
-    <nav class="main-nav main-nav__mobile-closed">
+    <nav class="main-nav main-nav--mobile-closed">
 
       <!-- БЛОК-1 Логотип (МТД)-->
       <div class="main-nav__control main-nav__block1">
@@ -106,7 +106,7 @@
         <li class="catalog__item">
           <div class="catalog__box">
             <div class="catalog__images">
-              <a class="catalog__link-picture" href="#">
+              <a class="catalog__link-picture" title="Страница в данный момент недоступна!">
                 <picture>
                   <!-- webp -->
                   <source type="image/webp" media="(min-width: 1150px)"
@@ -129,7 +129,7 @@
           </div>
           <div class="catalog__box catalog__box--inform">
             <div class="catalog__description">
-              <a class="catalog__link-dubl" href="#">
+              <a class="catalog__link-dubl" title="Страница в данный момент недоступна!">
                 <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
                 <p class="catalog__subtitle">Рост 30 см, вес 200 г</p>
               </a>
@@ -150,7 +150,7 @@
         <li class="catalog__item">
           <div class="catalog__box">
             <div class="catalog__images">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" title="Страница в данный момент недоступна!">
                 <picture>
                   <!-- webp -->
                   <source type="image/webp" media="(min-width: 1150px)"
@@ -173,7 +173,7 @@
           </div>
           <div class="catalog__box catalog__box--inform">
             <div class="catalog__description">
-              <a class="catalog__link-dubl" href="#">
+              <a class="catalog__link-dubl" title="Страница в данный момент недоступна!">
                 <h2 class="catalog__title">Корзинка для белья</h2>
                 <p class="catalog__subtitle">Диаметр 15 см, высота 10 см</p>
               </a>
@@ -194,7 +194,7 @@
         <li class="catalog__item">
           <div class="catalog__box">
             <div class="catalog__images">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" title="Страница в данный момент недоступна!">
                 <picture>
                   <!-- webp -->
                   <source type="image/webp" media="(min-width: 1150px)"
@@ -217,7 +217,7 @@
           </div>
           <div class="catalog__box catalog__box--inform">
             <div class="catalog__description">
-              <a class="catalog__link-dubl" href="#">
+              <a class="catalog__link-dubl" title="Страница в данный момент недоступна!">
                 <h2 class="catalog__title">Большая корзинка для игрушек</h2>
                 <p class="catalog__subtitle">Диаметр 30 см, высота 30 см</p>
               </a>
@@ -243,7 +243,7 @@
           <h2 class="making__title-text">Процесс <span><br></span> производства</h2>
         </div>
         <div class="making__item-video">
-          <a class="making__link" href="#">
+          <a class="making__link" title="Страница в данный момент недоступна!">
             <picture>
               <!-- webp -->
               <source type="image/webp" media="(min-width: 1150px)"
@@ -268,7 +268,7 @@
             появляются наши товары.</p>
         </div>
         <div class="making__item-button">
-          <a class="button making__button" href="#">Сделать заказ</a>
+          <a class="button making__button" href="order.html">Сделать заказ</a>
         </div>
       </div>
     </aside>
@@ -314,7 +314,7 @@
         </ul>
       </div>
       <div class="page-footer__item page-footer__item--copyright">
-        <a class="page-footer__link" target="_blank" href="https://htmlacademy.ru/">
+        <a class="page-footer__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__copyright-title">Разработано</span>
           <svg class="page-footer__icon page-footer__icon--copyright" width="27" height="35">
             <use xlink:href="img/sprite/sprite.svg#htmlacademy"></use>
@@ -328,27 +328,28 @@
   <div class="modal modal-close">
     <div class="modal__content">
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
-        <h2 class="modal__title">Добавить <br> в корзину</h2>
+        <h2 class="modal__title">Добавить <span><br></span> в корзину</h2>
+        <input class="visually-hidden" type="text" name="Article_number" value="ID-0000001">
         <fieldset class="modal__features">
           <legend class="modal__subtitle">Выберите размер:</legend>
           <ul class="modal__list">
             <li class="modal__item">
               <label class="modal__clickbox">
-                <input class="visually-hidden modal__clickbox-input" type="radio" name="id-0001" value="size-S">
+                <input class="visually-hidden modal__clickbox-input" type="radio" name="Size" value="size-S" checked>
                 <span class="modal__clickbox-mark"></span>
                 <span class="modal__clickbox-text">S</span>
               </label>
             </li>
             <li class="modal__item">
               <label class="modal__clickbox">
-                <input class="visually-hidden modal__clickbox-input" type="radio" name="id-0001" value="size-M" checked>
+                <input class="visually-hidden modal__clickbox-input" type="radio" name="Size" value="size-M">
                 <span class="modal__clickbox-mark"></span>
                 <span class="modal__clickbox-text">M</span>
               </label>
             </li>
             <li class="modal__item">
               <label class="modal__clickbox">
-                <input class="visually-hidden modal__clickbox-input" type="radio" name="id-0001" value="size-L">
+                <input class="visually-hidden modal__clickbox-input" type="radio" name="Size" value="size-L">
                 <span class="modal__clickbox-mark"></span>
                 <span class="modal__clickbox-text">L</span>
               </label>
@@ -359,8 +360,10 @@
       </form>
     </div>
   </div>
-</body>
 
-<script src="js/burger-menu.js"></script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/catalog-modal.js"></script>
+
+</body>
 
 </html>

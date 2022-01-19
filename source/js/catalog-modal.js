@@ -1,16 +1,29 @@
-var Modal = document.querySelector(".modal")
-var Toggle = document.querySelector(".catalog__button")
-var ModalContent = document.querySelector(".modal__content")
+const modal = document.querySelector(".modal")
+const toggle = document.querySelectorAll(".catalog__button")
+const articleInput = document.querySelector(".article_number")
+const modalContent = document.querySelector(".modal__content")
 
-Toggle.addEventListener("click", function () {
-  if (Modal.classList.contains("modal-close")) {
-    Modal.classList.remove("modal-close")
-  }
+toggle.forEach((btn) => {
+  btn.addEventListener("click", function (evt) {
+    evt.preventDefault()
+
+    if (modal.classList.contains("modal-close")) {
+      modal.classList.remove("modal-close")
+      console.log("### data: ", btn.dataset.id)
+      articleInput.value = btn.dataset.id
+    }
+  })
 })
 
-ModalContent.addEventListener("click", function () {
-  if (Modal.classList.contains("modal-close")) {
-  } else {
-    Modal.classList.add("modal-close")
+modal.addEventListener("click", function (evt) {
+  console.log(evt.target)
+
+  if (!evt.target.closest(".modal__content")) {
+    console.log("## im outside!!!")
+
+    if (modal.classList.contains("modal-close")) {
+    } else {
+      modal.classList.add("modal-close")
+    }
   }
 })

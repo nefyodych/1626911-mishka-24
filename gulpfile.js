@@ -120,14 +120,20 @@ const watcher = () => {
 
 export const build = gulp.series(
   clean,
+  optimizeImages,
+  createWebp,
 
-  gulp.parallel(copy, optimizeImages, styles, html, scripts, svg, sprite, createWebp)
+  gulp.parallel(copy, styles, html, scripts, svg, sprite),
+
+  server
 )
 
 export default gulp.series(
   clean,
+  optimizeImages,
+  createWebp,
 
-  gulp.parallel(copy, optimizeImages, styles, html, scripts, svg, sprite, createWebp),
+  gulp.parallel(copy, styles, html, scripts, svg, sprite),
 
   server,
   watcher

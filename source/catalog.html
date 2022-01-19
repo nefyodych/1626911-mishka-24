@@ -21,8 +21,8 @@
 
 <body>
   <!-- Хэдер - лого навигация -->
-  <header class="page-header page-header--mod">
-    <nav class="main-nav main-nav--mobile--closed">
+  <header class="page-header page-header--js page-header--mod">
+    <nav class="main-nav">
 
       <!-- БЛОК-1 Логотип (МТД)-->
       <div class="main-nav__control main-nav__block1">
@@ -36,7 +36,7 @@
         </a>
 
         <!-- Кнопка бургер меню (М)-->
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+        <button class="main-nav__toggle main-nav__toggle--js main-nav__toggle--open" type="button">
           <span class="visually-hidden">Открыть/Закрыть меню</span>
         </button>
       </div>
@@ -136,7 +136,7 @@
             </div>
             <div class="catalog__buy">
               <p class="catalog__price">1 200 руб.</p>
-              <a class="catalog__button" href="#">
+              <a class="catalog__button" href="#" data-id="ID-0000001">
                 <svg class="catalog__icon" width="21" height="18">
                   <use xlink:href="img/sprite/sprite.svg#basket"></use>
                 </svg>
@@ -180,7 +180,7 @@
             </div>
             <div class="catalog__buy">
               <p class="catalog__price">690 руб.</p>
-              <a class="catalog__button" href="#">
+              <a class="catalog__button" href="#" data-id="ID-0000002">
                 <svg class="catalog__icon" width="21" height="18">
                   <use xlink:href="img/sprite/sprite.svg#basket"></use>
                 </svg>
@@ -224,7 +224,7 @@
             </div>
             <div class="catalog__buy">
               <p class="catalog__price">1 500 руб.</p>
-              <a class="catalog__button" href="#">
+              <a class="catalog__button" href="#" data-id="ID-0000003">
                 <svg class="catalog__icon" width="21" height="18">
                   <use xlink:href="img/sprite/sprite.svg#basket"></use>
                 </svg>
@@ -329,7 +329,7 @@
     <div class="modal__content">
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
         <h2 class="modal__title">Добавить <span><br></span> в корзину</h2>
-        <input class="visually-hidden" type="text" name="Article_number" value="ID-0000001">
+        <input class="article_number visually-hidden" type="text" name="Article_number" value="none">
         <fieldset class="modal__features">
           <legend class="modal__subtitle">Выберите размер:</legend>
           <ul class="modal__list">

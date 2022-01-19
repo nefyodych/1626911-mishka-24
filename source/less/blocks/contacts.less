@@ -163,6 +163,18 @@
   width: 100%;
   height: 100%;
   display: block;
+
+  background-image: url("../img/background-img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background-img/map-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-img/map-desktop.jpg");
+  }
 }
 
 .contacts__post {

@@ -13,10 +13,10 @@
   <!-- Стили -->
   <link rel="stylesheet" href="css/style.min.css">
   <!-- Предзагрузки -->
+  <link rel="preload" href="js/scripts.js" as="script">
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="js/burger-menu.js" as="script">
 </head>
 
 <body>
@@ -47,24 +47,25 @@
           <a class="main-nav__list-link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__list-item">
-          <a class="main-nav__list-link" title="Вы сейчас находитесь на этой странице">Вязание на заказ</a>
+          <a class="main-nav__list-link" href="#" title="Вы сейчас находитесь на этой странице"
+            aria-current="page">Вязание на заказ</a>
         </li>
       </ul>
 
       <!-- БЛОК-3 Меню навигации (Д)-->
       <ul class="main-nav__list main-nav__block3">
         <li class="main-nav__list-item">
-          <a class="main-nav__list-link" title="Страница в данный момент недоступна!">Новые поступления</a>
+          <a class="main-nav__list-link" href="#" title="Страница в данный момент недоступна!">Новые поступления</a>
         </li>
         <li class="main-nav__list-item">
-          <a class="main-nav__list-link" title="Страница в данный момент недоступна!">Распродажа</a>
+          <a class="main-nav__list-link" href="#" title="Страница в данный момент недоступна!">Распродажа</a>
         </li>
       </ul>
 
       <!-- БЛОК-4 Меню навигации (МТД)-->
       <ul class="main-nav__list main-nav__list-mobile main-nav__block4">
         <li class="main-nav__list-item main-nav__list-item--search">
-          <a class="main-nav__list-link" title="Поиск временно не работает!">
+          <a class="main-nav__list-link" href="#" title="Поиск временно не работает!">
             <svg class="main-nav__list-icon" width="18" height="18">
               <use xlink:href="img/sprite/sprite.svg#search"></use>
             </svg>
@@ -72,7 +73,7 @@
           </a>
         </li>
         <li class="main-nav__list-item main-nav__list-item--buy">
-          <a class="main-nav__list-link" title="Корзина временно не работает!">
+          <a class="main-nav__list-link" href="#" title="Корзина временно не работает!">
             <svg class="main-nav__list-icon" width="21" height="18">
               <use xlink:href="img/sprite/sprite.svg#basket"></use>
             </svg>
@@ -275,7 +276,7 @@
   <footer class="page-footer">
     <div class="page-footer__box">
       <div class="page-footer__item page-footer__item--logo">
-        <a class="page-footer__link" title="Вы сейчас находитесь на главной странице">
+        <a class="page-footer__link" href="index.html">
           <svg class="page-footer__icon page-footer__img" width="113" height="46">
             <use xlink:href="img/sprite/sprite.svg#logo-mishka"></use>
           </svg>
@@ -321,7 +322,7 @@
     </div>
   </footer>
 
-  <script src="js/burger-menu.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 

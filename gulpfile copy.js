@@ -35,7 +35,7 @@ const html = () => {
 
 //scripts
 const scripts = () => {
-  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js"))
+  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js")).pipe(browser.stream())
 }
 
 //images
@@ -115,7 +115,7 @@ const server = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles))
-  gulp.watch("source/js/*.js").on("change", gulp.series(scripts, browser.reload))
+  gulp.watch("source/js/*.js", gulp.series(scripts))
   gulp.watch("source/*.html").on("change", gulp.series(html, scripts, browser.reload))
 }
 

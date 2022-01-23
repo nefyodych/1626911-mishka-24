@@ -1,34 +1,3 @@
-.decoration-fill {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    &::after {
-      position: absolute;
-      bottom: -7px;
-      left: 0;
-      right: 0;
-      content: "";
-
-      height: 21px;
-
-      background-image: url("../img/decoration-site-svg/zigzag-fill.svg");
-      background-position: center;
-      background-repeat: repeat-x;
-      background-size: contain;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      background-position: center;
-
-      bottom: -14px;
-
-      height: 31px;
-    }
-  }
-}
-
 .decoration-line {
   position: relative;
 
